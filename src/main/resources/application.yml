@@ -1,0 +1,14 @@
+server:
+  port: 8085
+person:
+  age: 16
+  name: 小马${random.int}
+  birth: 2019/12/12
+  boss: true
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    dao: debug
+    org:
+      mybatis: debug
+

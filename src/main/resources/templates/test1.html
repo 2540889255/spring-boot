@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function(){
+                 $.post("/testajax1",function (data) {
+                     console.log(data);
+                     var html;
+                     alert(data.toString());
+                     for (var i=0;i<data.length;i++){
+                         html+="<tr>"+"<td>"+data[i].name+"</td>"+
+                             "<td>"+data[i].id+"</td>"+
+                             "<td>"+data[i].buyber+"</td>"+"</tr>"
+                     }
+
+                     $("#content").html(html);
+
+                 })
+            })
+
+
+        })
+        
+        $.ajax({
+
+        })
+    </script>
+</head>
+<body>
+
+    <input type="button" id="btn" value="获取数据">
+    <table width="80%" align="center">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>姓名</td>
+                <td>供货商</td>
+            </tr>
+        </thead>
+        <tbody id="content">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>

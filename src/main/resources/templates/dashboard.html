@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Dashboard Template for Bootstrap</title>
+<!--		<link href="../static/assert/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}" rel="stylesheet">
+		<link href="../static/assert/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}" >
+		<link href="../static/assert/css/bootstrap.min.css" th:href="@{/webjars/jquery/3.4.1/css/jquery.min.js}" >-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link href="assert/css/sider.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--引入topbar-->
+		<div th:replace="commons/bar::topbar"></div>
+
+		<div class="container-fluid" style="padding-top: 1%;background-color:#E8E8E8;padding-left: 0px;padding-right: 0px;" >
+			<div class="row" style="height: 844px;" >
+				<!--引入sidebar-->
+				<div th:replace="commons/bar::sidebar"></div>
+				<!--这是首页大界面栏-->
+				<div class="col-md-10"  >
+
+					<div class="container-fluid" style="background-color:#FFFFFF; padding-top: 8px;">
+						<span class="rightheadfont">今日销售</span>
+						<hr/>
+						<div class="row">
+							<div class="col-md-4 column" style="background-color: #FF6666">
+								<h2>
+									销售额
+								</h2>
+								<p>
+									<span>0.00</span>
+									<hr/>
+									<span>折扣:0.00</span><br/>
+									<span>抹零:0.00</span>
+								</p>
+								<p>
+									<a class="btn btn-group" href="#">详情</a>
+								</p>
+							</div>
+							<div class="col-md-4 column" style="background-color: #33FF66;">
+								<h2>
+									销售单
+								</h2>
+								<p>
+									<span>0.00</span>
+									<hr/>
+									<span>汇总:0.00</span><br/>
+									<span>拆分:0.00</span>
+								</p>
+								<p>
+									<a class="btn btn-group" href="#">详情</a>
+								</p>
+							</div>
+							<div class="col-md-4 column" style="background-color: #FFFF99">
+								<h2>
+									会员详情
+								</h2>
+								<p>
+									<span>0.00</span>
+									<hr/>
+									<span>人数:0</span><br/>
+									<span>等级:0</span>
+								</p>
+								<p>
+									<a class="btn btn-group" href="#">详情</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<div class="container-fluid" style="background-color:#FFFFFF;padding-top: 8px;">
+						<span class="rightheadfont">今日收入</span>
+						<hr/>
+						<div class="row">
+							<div class="col-md-5" style="border-right: 1px #E8E8E8">
+								<h2>收入</h2>
+								<span style="font-size: larger;color: #bd2130">0.00</span><br/>
+								<span>收入=销售额+充值数值+抹零金额-退款金额-储蓄卡-积分</span>
+							</div>
+							<div class="col-md-3">
+								<span class="gryfont">现金</span><br/>
+								<span>0.00</span><br/>
+								<span class="gryfont">储蓄卡</span><br/>
+								<span>0.00</span>
+							</div>
+							<div class="col-md-3">
+								<span class="gryfont">思迅play</span><br/>
+								<span>0.00</span><br/>
+								<span class="gryfont">银行卡</span><br/>
+								<span>0.00</span>
+							</div>
+							<div class="col-md-1">
+								<span class="gryfont">支付宝</span><br/>
+								<span>0.00</span><br/>
+								<span class="gryfont">积分</span><br/>
+								<span>0.00</span>
+							</div>
+						</div>
+
+					</div>
+					<br/>
+					<div class="container-fluid" style="background-color:#FFFFFF;padding-top: 8px;">
+						<span class="rightheadfont">其他数据请求</span>
+						<input type="text" class="form-control-sm" style="margin-left: 10px;">
+						<button class="btn btn-success" style="margin-left: 10px;">搜索</button>
+						<hr/>
+						<div class="row" style="height: 150px;">
+							<div class="col-md-12">
+								<span class="gryfont">暂无数据</span>
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</body>
+
+</html>

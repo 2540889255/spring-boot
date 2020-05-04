@@ -1,0 +1,8 @@
+2019-11-09 20:47:33.362  INFO 1456 --- [main] com.aynu.springboot.ApplicationTests     : Starting ApplicationTests on DESKTOP-21VB0EM with PID 1456 (started by User in C:\Users\User\Desktop\project\spring-boot)
+2019-11-09 20:47:33.362  INFO 1456 --- [main] com.aynu.springboot.ApplicationTests     : The following profiles are active: dev
+2019-11-09 20:47:34.972  INFO 1456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-09 20:47:35.317  INFO 1456 --- [main] com.aynu.springboot.ApplicationTests     : Started ApplicationTests in 2.481 seconds (JVM running for 3.533)
+2019-11-09 20:47:35.552  INFO 1456 --- [main] com.aynu.springboot.ApplicationTests     : this is info logger
+2019-11-09 20:47:35.552  WARN 1456 --- [main] com.aynu.springboot.ApplicationTests     : this is warn logger
+2019-11-09 20:47:35.552 ERROR 1456 --- [main] com.aynu.springboot.ApplicationTests     : this is error logger
+2019-11-09 20:47:35.562  INFO 1456 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <!--<link href="css/signin.css" th:href="@{/css/signin.css}" rel="stylesheet">-->
+</head>
+<body>
+        <div th:replace="commons/bar::topbar"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <!--引入侧边栏-->
+                <div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
+
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+                    <div class="table-responsive">
+
+                    </div>
+                </main>
+                <form id="deleteEmpForm"  method="post">
+                    <input type="hidden" name="_method" value="delete"/>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

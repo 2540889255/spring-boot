@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function username() {
+            $.post("/test2",{"username":$("#username").val()},function (data) {
+                if(data.toString()=="ok"){
+                    $("#userid").css("color","green");
+                }
+                else{
+                    $("#userid").css("color","red");
+                }
+                $("#userid").html(data);
+            })
+        };
+
+        function show() {
+            $.get("/product",function (data) {
+                alert(data.toString());
+                alert(data[0].name);
+            })
+        }
+
+        function onsearch(){
+            var opts=$("#dg").datagrid("options");
+            opts.get("/product");
+            //opts.url="/product";
+            $("#dg").datagrid('load',params);
+
+        }
+
+    </script>
+</head>
+<body>
+
+
+    <input type="button" value="获取所有的商品信息" onclick="show()">
+
+    <table id="dg">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>商品名</td>
+                <td>供货商</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product:${products}">
+                <td th:text="${product.name}"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" onclick="onsearch()" value="dianji1">
+</body>
+</html>

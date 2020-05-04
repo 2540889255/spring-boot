@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function username() {
+          $.post("/test2",{"username":$("#username").val()},function (data) {
+              if(data.toString()=="ok"){
+                $("#userid").css("color","green");
+              }
+              else{
+                  $("#userid").css("color","red");
+              }
+              $("#userid").html(data);
+          })
+        };
+
+
+        function password() {
+            $.post("/test2",{"password":$("#password").val()},function (data) {
+                if(data.toString()=="ok"){
+                    $("#passwordid").css("color","green");
+                }
+                else{
+                    $("#passwordid").css("color","red");
+                }
+                $("#passwordid").html(data);
+            })
+        };
+
+
+
+    </script>
+</head>
+<body>
+    <input type="text" id="username" onblur="username()"><span id="userid"></span>
+    <br/>
+    <input type="password" id="password" onblur="password()"><span id="passwordid"></span>
+</body>
+</html>

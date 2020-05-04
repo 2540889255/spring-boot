@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.post({
+            url : "",
+            headers : {id : '1'},
+            success : function (user) {
+                if(user==null || user.id ==null){
+                    alert("获取失败");
+                    return;
+                }
+                alert("id"+user.id+"username"+user.username);
+            }
+
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
